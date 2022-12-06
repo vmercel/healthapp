@@ -100,6 +100,13 @@
       photo.setAttribute("src", data);
     }
   
+    function download() {
+        var download = document.getElementById("download");
+        var image = document.getElementById("canvas").toDataURL("image/png")
+            .replace("image/png", "image/octet-stream");
+        //download.setAttribute("href", image);
+        download.setAttribute("download","archive.png");
+        }
     // Capture a photo by fetching the current contents of the video
     // and drawing it into a canvas, then converting that to a PNG
     // format data URL. By drawing it on an offscreen canvas and then
