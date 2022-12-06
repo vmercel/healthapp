@@ -1,35 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>CodePen - A Pen by Chris</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
+
 </head>
 <body>
-    <div class="contentarea">
-        <h1>NEU IoT Center Health App</h1>
-        <p>
-          Take a photo of the suspected diseased part of your body and send to our AI Engine for Diagnosis
-        </p>
-        <div class="camera">
-          <video id="video">Video stream not available.</video>
-          <button id="startbutton">Take photo</button>
-        </div>
-        <canvas id="canvas"> </canvas>
-        <div class="output">
-          <img id="photo" alt="The screen capture will appear in this box." />
-        </div>
-        <p>
-          Visit our article
-          <a
-            href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Taking_still_photos">
-            Taking still photos with WebRTC</a
-          >
-          to learn more about the technologies used here.
-        </p>
-      </div>
-      <script src="script.js"></script>
+<!-- partial:index.partial.html -->
+<div class="display-cover">
+    <video autoplay></video>
+    <canvas class="d-none"></canvas>
+
+    <div class="video-options">
+        <select name="" id="" class="custom-select">
+            <option value="">Select camera</option>
+        </select>
+    </div>
+
+    <img class="screenshot-image d-none" alt="">
+
+    <div class="controls">
+        <button class="btn btn-danger play" title="Play"><i data-feather="play-circle"></i></button>
+        <button class="btn btn-info pause d-none" title="Pause"><i data-feather="pause"></i></button>
+        <button class="btn btn-outline-success screenshot d-none" title="ScreenShot"><i data-feather="image"></i></button>
+    </div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.9.0/feather.min.js'></script><script  src="./script.js"></script>
+
 </body>
 </html>
